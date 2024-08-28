@@ -13,7 +13,7 @@ const getDayOfWeek = date => new Date(1970, 0, date.getDate() + 4).toLocaleStrin
 const getDateFromFileName = path => new Date(path.substring(0, 11) + ' 12:00:00 -0700')
 const padZero = i => String(i).padStart(2, '0')
 const getFormattedMonth = date => date.toLocaleString('default', { month: 'short' })
-const getFormattedDate = date => `${getDayOfWeek(date)}, ${date.getDate()} ${getFormattedMonth(date)} ${date.getFullYear()} ${padZero(date.getHours())}:${padZero(date.getMinutes())}:${padZero(date.getSeconds())} -0700`
+const getFormattedDate = date => `${getDayOfWeek(date)}, ${date.getDate()} ${getFormattedMonth(date)} ${date.getFullYear()} ${padZero(date.getHours())}:${padZero(date.getMinutes())}:${padZero(date.getSeconds())} ${offset}`
 
 let lines = []
 lines.push(`From: ${address}`)
