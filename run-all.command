@@ -8,3 +8,8 @@ done
 for jpg_file in *.jpg; do
   node index-jpg "$jpg_file"
 done
+
+
+for png_file in *.png; do
+  node index-png "$png_file"
+done
